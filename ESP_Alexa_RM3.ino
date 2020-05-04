@@ -1,7 +1,7 @@
 #include <FS.h>                                   // This needs to be first, or it all crashes and burns...
 
 // ***********************************************
-const bool DEBUG = false;
+const bool DEBUG = true;
 // ***********************************************
 
 #include <ESP8266WiFi.h>
@@ -22,7 +22,7 @@ const bool DEBUG = false;
 #include "mqttSettings.h"                         // Contains the below defines
 /* 
   #define MQTTSERVER     "IP ADDRESS STRING"
-  #define MQTTSERVERPORT PORT NUMBER
+  #define MQTTSERVERPORT "PORT NUMBER"
   #define MQTTUSER       "USER STRING"
   #define MQTTPASSWORD   "PASSWORD STRING"
 */
@@ -37,11 +37,11 @@ const bool DEBUG = false;
 #define irTx D2                                   // GPIO4 (D2) to be used for IR LED sending the message
 #define irRx D5                                   // GPIO14 (D5) to IR receiver
 #define rm3Led1 D1                                // RM3 LED 1 (Active low)
-//#define rm3Reset D3                               // RM3 Reset switch (Active low)
+//#define rm3Reset D3                               // RM3 Reset switch (Active low?)
 #define rm3Led2 D4                                // RM3 LED 2 (Active low)
 #define kCaptureBufferSize 1024                   // IR receive buffer size
 #define kTimeout 50                               // IR receive timout
-#define kMinUnknownSize 12                        // IR receive minimum size
+#define kMinUnknownSize 40                        // IR receive minimum size
 // ***********************************************
 // ***********************************************
 
