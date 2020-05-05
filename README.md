@@ -35,4 +35,6 @@ ESPALEXA + "/" + devname + "/WipeSPIFFS" will format the SPIFFS filesystem and r
 
 ESPALEXA + "/" + devname + "/Mem" will return the free heap space. Used for testing for memory leaks.
 
+-----------------
 
+If the IR receiver detects IR transmissions then it will try to decode the IR format and send results to MQTT. This allows you to get the thing running and then interogate the on/off IR codes for the devices to be edited into a irconfig.json that can then be uploaded over MQTT.
